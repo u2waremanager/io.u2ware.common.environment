@@ -42,15 +42,19 @@ mysql:9.5.0
 # Package
 
 ```bash
-docker build -t ghcr.io/u2waremanager/mysql:9.5.0 .
+docker build \
+--platform linux/arm64,linux/amd64 \
+-t ghcr.io/u2waremanager/io.u2ware.common.environment:mysql-9.5.0 \
+.
 ```
 
 # Publish
 ```bash
-docker push ghcr.io/u2waremanager/mysql:9.5.0
+docker push ghcr.io/u2waremanager/io.u2ware.common.environment:mysql-9.5.0
 ```
 
 # Install
 ```bash
-docker pull ghcr.io/u2waremanager/mysql:9.5.0
+docker pull ghcr.io/u2waremanager/io.u2ware.common.environment:mysql-9.5.0
 ```
+

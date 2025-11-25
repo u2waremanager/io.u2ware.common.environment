@@ -42,15 +42,20 @@ postgres:16.4-alpine3.20
 # Package
 
 ```bash
-docker build -t ghcr.io/u2waremanager/postgres:16.4-alpine3.20 .
+docker build \
+--platform linux/arm64,linux/amd64  \
+-t ghcr.io/u2waremanager/io.u2ware.common.environment:postgres-16.4-alpine3.20 \
+.
 ```
+
 
 # Publish
 ```bash
-docker push ghcr.io/u2waremanager/postgres:16.4-alpine3.20
+docker push ghcr.io/u2waremanager/io.u2ware.common.environment:postgres-16.4-alpine3.20 
 ```
+
 
 # Install
 ```bash
-docker pull ghcr.io/u2waremanager/postgres:16.4-alpine3.20
+docker pull ghcr.io/u2waremanager/io.u2ware.common.environment:postgres-16.4-alpine3.20 
 ```
