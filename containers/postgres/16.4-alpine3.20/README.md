@@ -4,6 +4,8 @@
 | --- | --- | 
 | [IMAGE_NAME] | 이미지 이름|
 | [IMAGE_TAG] | 이미지 태그 또는 버전. latest|
+| [HOST_PORT] | HOST_PORT|
+| [HOST_VOLUMN] | HOST_VOLUMN|
 | [CONTAINER_NAME] | CONTAINER_NAME |
 | [POSTGRES_DB] | POSTGRES_DB |
 | [POSTGRES_USER] | POSTGRES_USER |
@@ -14,7 +16,8 @@ Usage :
 
 ```bash
 docker run -d \
--p 5432:5432 \
+-p [HOST_PORT]:5432 \
+-v [HOST_VOLUMN]:/var/lib/postgresql/data \
 -e POSTGRES_HOST_AUTH_METHOD=trust \
 -e POSTGRES_DB=[POSTGRES_DB] \
 -e POSTGRES_USER=[POSTGRES_USER] \

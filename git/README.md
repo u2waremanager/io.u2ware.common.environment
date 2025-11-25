@@ -1,10 +1,4 @@
-# Git Install
-
-
-
-
-
-# Git Command
+# Git 
 ```bash
 git --version
 
@@ -17,16 +11,3 @@ git config --global user.email [USER_EMAIL]
 git clone [REPOSITORY URL]
 ```
 
-# VSCode Settings
-
-| key | Value | 
-| --- | --- |
-| git.autofetch | true |
-| git.autofetchPeriod | 3 |
-
-
-# Push By VSCode
-
-
-
-# Pull By VSCode 
