@@ -11,7 +11,7 @@
 | [NAMESPACE] | 개인 계정 또는 조직의 이름 |
 
 
-# Authentication
+# Config (authentication)
 
 ```bash
 docker login ghcr.io -u [USER_NAME]
@@ -35,8 +35,7 @@ docker login ghcr.io
 
 # Build
 ```bash
-cd [PRODUCT]
-docker build -t [IMAGE_NAME]:[IMAGE_TAG] .
+docker build -t ghcr.io/[NAMESPACE]/[IMAGE_NAME]:[IMAGE_TAG] .
 ```
 
 

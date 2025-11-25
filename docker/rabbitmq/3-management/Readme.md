@@ -9,18 +9,7 @@
 | [RABBITMQ_DEFAULT_PASS] | POSTGRES_PASSWORD |
 
 
-# Build 
-Usage : 
-
-```bash
-docker build -t [IMAGE_NAME]:[IMAGE_TAG] .
-```
-
-Example : 
-> docker build -t rabbitmq:3-management .
-
-
-# Run 
+# Containing 
 Usage :
 
 ```bash
@@ -35,12 +24,29 @@ docker run -d \
 ```
 
 Example : 
+```bash
+docker run -d \
+-p 15672:15672 \
+-p 5672:5672 \
+-p 61613:61613 \
+-e RABBITMQ_DEFAULT_USER=guest \
+-e RABBITMQ_DEFAULT_PASS=guest \
+--name guest-rabbitmq \
+rabbitmq:3-management
+```
 
-> docker run -d \
-    -p 15672:15672 \
-    -p 5672:5672 \
-    -p 61613:61613 \
-    -e RABBITMQ_DEFAULT_USER=guest \
-    -e RABBITMQ_DEFAULT_PASS=guest \
-    --name yours-rabbitmq \
-    rabbitmq:3-management
+# Package
+
+```bash
+docker build -t ghcr.io/u2waremanager/rabbitmq:3-management .
+```
+
+# Publish
+```bash
+docker push ghcr.io/u2waremanager/rabbitmq:3-management
+```
+
+# Install
+```bash
+docker pull ghcr.io/u2waremanager/rabbitmq:3-management
+```
